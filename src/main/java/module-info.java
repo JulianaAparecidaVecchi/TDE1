@@ -1,10 +1,12 @@
-module com.example.tde1 {
-    requires javafx.controls;
-    requires javafx.fxml;
+module tde {
+        requires javafx.controls;
+        requires javafx.fxml;
+        requires org.kordamp.bootstrapfx.core;
+        requires java.desktop;
 
-    requires org.kordamp.bootstrapfx.core;
-    requires java.desktop;
+        opens aplicacao to javafx.fxml;
+        opens algoritmos to javafx.fxml;
 
-    opens com.example.tde1 to javafx.fxml;
-    exports com.tde1;
+        exports aplicacao;
+        exports algoritmos;
 }
